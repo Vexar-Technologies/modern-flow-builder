@@ -1,0 +1,141 @@
+/* React Flow Overrides for TLDraw-like Aesthetics */
+
+.react-flow {
+    background: var(--bg-primary);
+}
+
+/* Background Pattern */
+.react-flow__background {
+    background-color: var(--bg-primary);
+}
+
+.react-flow__background pattern circle {
+    fill: var(--border-subtle);
+}
+
+/* Edges */
+.react-flow__edge-path {
+    stroke: var(--accent-primary);
+    stroke-width: 2;
+}
+
+.react-flow__edge.animated path {
+    stroke-dasharray: 5;
+    animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+    from {
+        stroke-dashoffset: 10;
+    }
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+    stroke: var(--accent-secondary);
+    stroke-width: 3;
+}
+
+/* Connection Line */
+.react-flow__connection-line {
+    stroke: var(--accent-primary);
+    stroke-width: 2;
+    stroke-dasharray: 5 5;
+}
+
+/* Handles */
+.react-flow__handle {
+    width: 12px;
+    height: 12px;
+    background: var(--bg-elevated);
+    border: 2px solid var(--accent-primary);
+    transition: all var(--transition-fast);
+}
+
+.react-flow__handle:hover {
+    background: var(--accent-primary);
+    transform: scale(1.2);
+}
+
+.react-flow__handle-top {
+    top: -6px;
+}
+
+.react-flow__handle-bottom {
+    bottom: -6px;
+}
+
+.react-flow__handle-left {
+    left: -6px;
+}
+
+.react-flow__handle-right {
+    right: -6px;
+}
+
+/* Minimap */
+.react-flow__minimap {
+    background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.react-flow__minimap-mask {
+    fill: rgba(99, 102, 241, 0.1);
+}
+
+.react-flow__minimap-node {
+    fill: var(--accent-primary);
+    stroke: none;
+}
+
+/* Controls */
+.react-flow__controls {
+    background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.react-flow__controls-button {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    transition: all var(--transition-fast);
+}
+
+.react-flow__controls-button:last-child {
+    border-bottom: none;
+}
+
+.react-flow__controls-button:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+}
+
+.react-flow__controls-button svg {
+    fill: currentColor;
+}
+
+/* Selection Box */
+.react-flow__selection {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px dashed var(--accent-primary);
+}
+
+/* Attribution - Hide it */
+.react-flow__attribution {
+    display: none;
+}
+
+/* Panel Positioning */
+.react-flow__panel {
+    margin: 12px;
+}

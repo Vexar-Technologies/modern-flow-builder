@@ -1,0 +1,230 @@
+.header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-logo .logo-icon {
+    font-size: 24px;
+}
+
+.header-divider {
+    width: 1px;
+    height: 24px;
+    background: var(--border-default);
+}
+
+/* Platform Selector */
+.platform-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.platform-selector:hover {
+    border-color: var(--border-focus);
+}
+
+.platform-selector .platform-icon {
+    font-size: 18px;
+}
+
+.platform-selector .platform-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.platform-selector .dropdown-icon {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-left: 4px;
+}
+
+/* Platform Dropdown */
+.platform-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    min-width: 180px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    z-index: 1000;
+    animation: fadeIn var(--transition-fast);
+}
+
+.platform-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.platform-option:hover {
+    background: var(--bg-tertiary);
+}
+
+.platform-option.active {
+    background: var(--accent-primary-glow);
+}
+
+.platform-option .option-icon {
+    font-size: 16px;
+}
+
+/* Header Center - Bot Name */
+.header-center {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bot-name-input {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 6px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    border-radius: 6px;
+    transition: all var(--transition-fast);
+    min-width: 150px;
+}
+
+.bot-name-input:hover {
+    background: var(--bg-tertiary);
+}
+
+.bot-name-input:focus {
+    outline: none;
+    background: var(--bg-tertiary);
+    border-color: var(--border-focus);
+}
+
+/* Header Right - Actions */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings-btn {
+    padding: 8px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.settings-btn:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+}
+
+/* Save/Load Button Group */
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn var(--transition-fast);
+}
+
+.modal {
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+    border-radius: var(--panel-radius);
+    box-shadow: var(--shadow-lg);
+    animation: slideInRight var(--transition-normal);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.modal-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.modal-close {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 18px;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.modal-close:hover {
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-subtle);
+}
